@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>net.rgielen</groupId>
+    <artifactId>com4j-office2010-bindings</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <distributionManagement>
+        <repository>
+            <id>rgielen-releases</id>
+            <url>http://nexus-rgielen.rhcloud.com/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>rgielen-snapshots</id>
+            <url>http://nexus-rgielen.rhcloud.com/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>jenkins-releases</id>
+            <url>http://maven.jenkins-ci.org/content/repositories/releases</url>
+            <releases/>
+        </repository>
+    </repositories>
+
+    <modules>
+        <module>office</module>
+    </modules>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.jvnet.com4j</groupId>
+                <artifactId>com4j</artifactId>
+                <version>${com4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jvnet.com4j</groupId>
+                <artifactId>tlbimp</artifactId>
+                <version>${com4j.version}</version>
+                <optional>true</optional>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <properties>
+        <com4j.version>20110320</com4j.version>
+<!--
+        <com4j.version>20120426-2</com4j.version>
+-->
+    </properties>
+
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.jvnet.com4j</groupId>
+                    <artifactId>maven-com4j-plugin</artifactId>
+                    <version>1.0</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.jvnet.com4j</groupId>
+                            <artifactId>com4j</artifactId>
+                            <version>${com4j.version}</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.jvnet.com4j</groupId>
+                            <artifactId>tlbimp</artifactId>
+                            <version>${com4j.version}</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+</project>
