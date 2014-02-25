@@ -23,7 +23,6 @@
     </dependencies>
 
     <properties>
-        <gen.target.package>net.rgielen.com4j.office2010.office</gen.target.package>
     </properties>
 
     <build>
@@ -41,7 +40,7 @@
                             <libraries>
                                 <libConfig>
                                     <libId>2DF8D04C-5BFA-101B-BDE5-00AA0044DE52</libId>
-                                    <package>${gen.target.package}</package>
+                                    <package>${gen.target.package.office}</package>
                                 </libConfig>
                             </libraries>
                         </configuration>
