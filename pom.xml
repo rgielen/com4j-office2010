@@ -22,16 +22,27 @@
 
     <repositories>
         <repository>
+            <id>rgielen-snapshots</id>
+            <url>http://nexus-rgielen.rhcloud.com/nexus/content/repositories/groups/private/</url>
+        </repository>
+        <repository>
             <id>jenkins-releases</id>
             <url>http://maven.jenkins-ci.org/content/repositories/releases</url>
             <releases/>
         </repository>
     </repositories>
 
+    <properties>
+        <com4j.version>20120426-2</com4j.version>
+        <!--
+        <com4j.version>20110320</com4j.version>
+        -->
+    </properties>
+
     <modules>
         <module>office</module>
+        <module>vba</module>
     </modules>
-
 
     <dependencyManagement>
         <dependencies>
@@ -48,21 +59,14 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    <properties>
-        <com4j.version>20110320</com4j.version>
-<!--
-        <com4j.version>20120426-2</com4j.version>
--->
-    </properties>
-
 
     <build>
         <pluginManagement>
             <plugins>
                 <plugin>
-                    <groupId>org.jvnet.com4j</groupId>
-                    <artifactId>maven-com4j-plugin</artifactId>
-                    <version>1.0</version>
+                    <groupId>net.rgielen</groupId>
+                    <artifactId>com4j-maven-plugin</artifactId>
+                    <version>1.0.3-SNAPSHOT</version>
                     <dependencies>
                         <dependency>
                             <groupId>org.jvnet.com4j</groupId>

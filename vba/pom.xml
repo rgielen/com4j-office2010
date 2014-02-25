@@ -9,12 +9,17 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>com4j-office2010-office</artifactId>
+    <artifactId>com4j-office2010-vba</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>org.jvnet.com4j</groupId>
             <artifactId>com4j</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>com4j-office2010-office</artifactId>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>org.jvnet.com4j</groupId>
@@ -23,7 +28,7 @@
     </dependencies>
 
     <properties>
-        <gen.target.package>net.rgielen.com4j.office2010.office</gen.target.package>
+        <gen.target.package>net.rgielen.com4j.office2010.vba</gen.target.package>
     </properties>
 
     <build>
@@ -41,6 +46,10 @@
                             <libraries>
                                 <libConfig>
                                     <libId>2DF8D04C-5BFA-101B-BDE5-00AA0044DE52</libId>
+                                    <package>${gen.target.package}</package>
+                                </libConfig>
+                                <libConfig>
+                                    <libId>0002E157-0000-0000-C000-000000000046</libId>
                                     <package>${gen.target.package}</package>
                                 </libConfig>
                             </libraries>
