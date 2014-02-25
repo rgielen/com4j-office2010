@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>com4j-office2010-vba</artifactId>
+    <artifactId>com4j-office2010-excel</artifactId>
 
     <dependencies>
         <dependency>
@@ -42,6 +42,10 @@
                                 <libConfig>
                                     <libId>0002E157-0000-0000-C000-000000000046</libId>
                                     <package>${gen.target.package.vba}</package>
+                                </libConfig>
+                                <libConfig>
+                                    <libId>00020813-0000-0000-C000-000000000046</libId>
+                                    <package>${gen.target.package.excel}</package>
                                 </libConfig>
                             </libraries>
                         </configuration>

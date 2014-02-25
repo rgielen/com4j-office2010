@@ -33,18 +33,24 @@
     </repositories>
 
     <properties>
-        <com4j.version>20120426-2</com4j.version>
         <gen.target.package>net.rgielen.com4j.office2010</gen.target.package>
         <gen.target.package.office>${gen.target.package}.office</gen.target.package.office>
         <gen.target.package.vba>${gen.target.package}.vba</gen.target.package.vba>
-        <!--
+        <gen.target.package.word>${gen.target.package}.word</gen.target.package.word>
+        <gen.target.package.excel>${gen.target.package}.excel</gen.target.package.excel>
+
         <com4j.version>20110320</com4j.version>
+        <!--
+        <com4j.version>20120426-2</com4j.version>
         -->
     </properties>
 
     <modules>
         <module>office</module>
         <module>vba</module>
+        <module>word</module>
+        <module>excel</module>
+        <module>samples</module>
     </modules>
 
     <dependencyManagement>
