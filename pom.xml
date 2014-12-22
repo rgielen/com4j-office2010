@@ -9,18 +9,33 @@
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
 
-    <distributionManagement>
-        <repository>
-            <id>rgielen-releases</id>
-            <url>http://nexus-rgielen.rhcloud.com/nexus/content/repositories/releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>rgielen-snapshots</id>
-            <url>http://nexus-rgielen.rhcloud.com/nexus/content/repositories/snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
+    <description>
+        A Java binding for MS Office 2010 (tm) COM access
+    </description>
+    <url>https://github.com/rgielen/com4j-office2010</url>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>René Gielen</name>
+            <url>https://github.com/rgielen</url>
+        </developer>
+    </developers>
+
+    <scm>
+        <url>https://github.com/rgielen/com4j-office2010</url>
+        <connection>scm:git:git@github.com:rgielen/com4j-office2010.git</connection>
+        <developerConnection>scm:git:git@github.com:rgielen/com4j-office2010.git</developerConnection>
+    </scm>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
         <gen.target.package>net.rgielen.com4j.office2010</gen.target.package>
         <gen.target.package.office>${gen.target.package}.office</gen.target.package.office>
         <gen.target.package.vba>${gen.target.package}.vba</gen.target.package.vba>
