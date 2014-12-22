@@ -10,7 +10,7 @@
     <groupId>net.rgielen</groupId>
     <artifactId>com4j-office2010-bindings</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.1</version>
+    <version>1.0.2-SNAPSHOT</version>
 
     <description>
         A Java binding for MS Office 2010 (tm) COM access
